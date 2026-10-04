@@ -2063,14 +2063,24 @@ class _StatusTimeline extends StatelessWidget {
 void _openAssetCatalogue(BuildContext context) {
   Navigator.push(
     context,
-    MaterialPageRoute(builder: (_) => const AssetCataloguePage()),
+    MaterialPageRoute(
+      builder: (_) => Scaffold(
+        appBar: AppBar(title: const Text('Assets')),
+        body: const AssetCataloguePage(),
+      ),
+    ),
   );
 }
 
 void _openRequests(BuildContext context) {
   Navigator.push(
     context,
-    MaterialPageRoute(builder: (_) => const RequestsPage()),
+    MaterialPageRoute(
+      builder: (_) => Scaffold(
+        appBar: AppBar(title: const Text('Requests')),
+        body: const RequestsPage(),
+      ),
+    ),
   );
 }
 
